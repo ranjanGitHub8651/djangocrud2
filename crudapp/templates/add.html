@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App | Add New </title>
+    <style>
+        input{
+            width: 20%;
+            height: 30px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        label{
+            display: inline-block;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter Your Name" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter Your Email" required>
+            <label>Number</label>
+            <input type="number" name="number" placeholder="Enter Your Number" required>
+            <label>City</label>
+            <input type="text" name="city" placeholder="Enter Your City" required>
+            <input type="submit" value="Add New Record">
+            <a href="/">Home</a>
+        </form>
+    </center>
+</body>
+</html>
